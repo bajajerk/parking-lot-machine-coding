@@ -26,6 +26,22 @@ export class ParkingTicketService {
 	}
 
 	billVehicle(ticket: ParkingTicket, exitTime: Date) {
-		return ticket.billVehicle(exitTime);
+		// @ts-ignore
+		const parkingTimeInMinutes = Math.abs(new Date(exitTime) - new Date(ticket.getEntryTime()));
+		const parkingTimeInHours = Math.ceil((parkingTimeInMinutes / 3600000));
+
+		const vehicle = ticket.getVehicle();
+		const parkingLot = ticket.getParkingLot();
+
+		let billedAmount: number = 0;
+		if (vehicle.getType() === VehicleType.CAR) {
+			billedAmount = parkingTimeInHours * parkingLot.getCarFeePerHour()
+		} else if (vehicle.getType() === VehicleType.TWOWHEELER) {
+			billedAmount = parkingTimeInHours * parkingLot.getTwoWheelerCostPerHour()
+		}
+
+		return ticket.updateExitTimeAndBill(exitTime, billedAmount);
 	}
+
+
 }

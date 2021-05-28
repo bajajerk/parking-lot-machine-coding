@@ -8,10 +8,6 @@ export class VehicleService {
 		this.vehicleDB = [];
 	}
 
-	vehicleList() {
-		return this.vehicleDB;
-	}
-
 	onboard(registerationNumber: string, type: VehicleType) {
 		const vehicle = this.vehicleDB.find(vehicle => vehicle.getRegisterationNumber() === registerationNumber);
 		if(vehicle){
@@ -23,17 +19,5 @@ export class VehicleService {
 			return newVehicle;
 		}
 	}
-
-	// getMyPastParkingTickets(registerationNumber: string){
-	// 	const vehicle = this.vehicleDB.find(vehicle => vehicle.getRegisterationNumber() === registerationNumber);
-	// 	if(!vehicle){
-	// 		return [];
-	// 	}
-	// 	else{
-	// 		const
-	// 	}
-	//
-	// }
-
 
 }

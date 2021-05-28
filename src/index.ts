@@ -18,16 +18,16 @@ const dlfParkingLot = onboardParkingSlot("DLF-PROMENADE", new ParkingTariff(10, 
 const ticket = createTicket(dlfParkingLot, vehicle1, (new Date('2021/10/09 12:00')));
 
 //onbaord vehicle 1 out of dlf
-const billedTicket = billVehicle(vehicle1, dlfParkingLot, (new Date('2021/10/09 13:00')));
+const billedTicket = billVehicle(vehicle1, dlfParkingLot, (new Date('2021/10/09 13:10')));
 
 
 
 
 //onbaord scooter 1 to dlf
-const ticket2 = createTicket(dlfParkingLot, scooter1, (new Date('2021/10/09 12:00')));
+const ticket2 = createTicket(dlfParkingLot, scooter1, (new Date('2021/10/09 14:00')));
 
 
-console.log(dlfParkingLot)
+// console.log(dlfParkingLot)
 
 // get parking tickets for vehicle 1
 console.log(getParkingTickets("DL-123", VehicleType.CAR))

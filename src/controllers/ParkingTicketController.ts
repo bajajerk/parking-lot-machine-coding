@@ -1,7 +1,6 @@
 import {parkingLotService, parkingTicketService, vehicleService} from "../services";
 import {ParkingLot} from "../models/ParkingLot";
 import {Vehicle} from "../models/Vehicle";
-import {ParkingTicket} from "../models/ParkingTicket";
 
 module.exports = {
 	createTicket: (parkingLot: ParkingLot, vehicle: Vehicle, entryTime: Date) => {
