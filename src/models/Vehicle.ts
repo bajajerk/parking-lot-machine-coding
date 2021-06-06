@@ -3,7 +3,6 @@ export enum VehicleType {
 	TWOWHEELER = 'TWOWHEELER'
 }
 
-
 export class Vehicle {
 	private registerationNumber: string;
 	private type: VehicleType;
@@ -20,5 +19,4 @@ export class Vehicle {
 	getType(){
 		return this.type;
 	}
-
 }
