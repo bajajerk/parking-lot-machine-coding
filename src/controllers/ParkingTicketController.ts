@@ -12,6 +12,7 @@ module.exports = {
 		else {
 			throw "PARKING IS FULL, SORRY"
 		}
+
 	},
 
 	billVehicle: (vehicle: Vehicle, lot: ParkingLot, exitTime: Date) => {

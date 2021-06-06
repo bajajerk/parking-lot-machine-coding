@@ -36,7 +36,6 @@ export class ParkingLot {
 
 	parkVehicle(vehicle: Vehicle) {
 
-		// @TODO handle error
 		if (vehicle.getType() === VehicleType.CAR && this.isCarSlotsAvailable()) {
 			this.carSlotsCount--;
 		} else if (this.isTwoWhellerSlotsAvailable()) {
