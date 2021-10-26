@@ -34,7 +34,7 @@ export class ParkingLotService {
 		if (lot) {
 			lot.parkVehicle(vehicle);
 		} else {
-			throw "INVALID PARKING LOT"
+			throw "INVALID PARKING LOT, please input correct id"
 		}
 	}
 
